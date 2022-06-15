@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Registration Form</title>
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background: hsl(0, 100%, 74%);
+      background-image: url("bg-intro-desktop.png");
+    }
+
+    .container {
+      font-size: smaller;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      max-width: 450px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      max-width: 450px;
+      width: 100%;
+      height: 100%;
+      margin: 10%;
+      margin-top: auto;
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 6px;
+      box-shadow: 0px 6px #0000005b;
+    }
+
+    .hero_text {
+      color: #fff;
+    }
+
+    .containertxt {
+      text-align: center;
+      width: 100%;
+      margin-top: 15%;
+      margin-left: 10%;
+      margin-bottom: 20px;
+      background-color: hsl(248, 32%, 49%);
+      padding: 15px;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      box-shadow: 0px 6px #0000005b;
+    }
+
+    .content form .user-details {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    form .user-details .input-box {
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    form .input-box span.details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .user-details .input-box input {
+      height: 45px;
+      padding: 5%;
+      width: 100%;
+      outline: none;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      border-bottom-width: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .user-details .input-box input:focus,
+    .user-details .input-box input:valid {
+      border-color: hsl(154, 59%, 51%);
+    }
+
+    .user-details .input-box input:invalid {
+      border-color: hsl(0, 100%, 74%);
+      background-image: url("icon-error.svg");
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      background-position-x: 95%;
+    }
+
+    .user-details .input-box #fname input:invalid {
+      border-color: aqua;
+    }
+
+    .t_s {
+      font-size: x-small;
+      text-align: center;
+      color: hsl(246, 25%, 77%);
+      margin: 7px;
+    }
+
+    .t_s b {
+      color: hsl(0, 100%, 74%);
+    }
+
+    form .button {
+      height: 45px;
+      margin-top: 13px;
+      border-radius: 5px;
+      box-shadow: 0px 6px #0000005b;
+    }
+
+    form .button input {
+      height: 45px;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: hsl(154, 59%, 51%);
+    }
+
+    form .button input:hover {
+      /* transform: scale(0.99); */
+      background: rgba(56, 204, 140, 0.603);
+    }
+
+    form .button:active {
+      transform: translateY(4px);
+      box-shadow: 0px 3px #0000005b;
+    }
+
+    @media (max-width: 375px) {
+      body {
+        flex-direction: column;
+        background-image: url("bg-intro-mobile.png");
+        margin: 10%;
+        margin-left: 0%;
+      }
+
+      .hero_text {
+        text-align: center;
+        margin: auto;
+        margin-left: 12%;
+      }
+
+      .container {
+        max-width: 100%;
+        margin: auto;
+        margin-left: 0%;
+      }
+
+      form .user-details .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+      }
+
+      form .category {
+        width: 100%;
+      }
+
+      .content form .user-details {
+        max-height: 300px;
+        overflow-y: scroll;
+      }
+
+      .user-details::-webkit-scrollbar {
+        width: 5px;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .container .content .category body {
+        flex-direction: column;
+      }
+      form .button input {
+        font-size: small;
+      }
+    }
+  </style>
+  <body>
+    <div class="hero_text">
+      <h1><b>Learn to code</b></h1>
+      <h1><b>by watching others</b></h1>
+      <p>See how experienced developers solve problems in real-time.</p>
+      <p>Watching scripted tutorials is great, but understanding how</p>
+      <p>developers think is invaluable.</p>
+    </div>
+    <div class="container">
+      <p class="containertxt">
+        <b>Try it free 7 days</b> then 20/mo. thereafter
+      </p>
+      <div class="content">
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details"></span>
+              <input
+                id="fname"
+                type="text"
+                placeholder="First name"
+                minlength="3"
+                maxlength="20"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details"></span>
+              <input
+                id="lname"
+                type="text"
+                placeholder="Last name"
+                minlength="3"
+                maxlength="20"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details"></span>
+              <input
+                id="email"
+                type="email"
+                placeholder="Email"
+                maxlength="20"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details"></span>
+              <input
+                id="pword"
+                type="password"
+                placeholder="Password"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                required
+              />
+            </div>
+          </div>
+          <div class="button">
+            <input type="submit" value="CLAIM YOUR FREE TRIAL" />
+          </div>
+          <p class="t_s">
+            By clicking this button, you are agreeing to our
+            <b>Terms and Services</b>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
