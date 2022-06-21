@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to JS</title>
+  </head>
+  <body>
+    <h1>Introduction to Javascript</h1>
+
+    <div id="result"></div>
+
+    <script type="text/javascript">
+      const myScreenOutput = document.getElementById("result");
+      const myInfo = {
+        myFirstName: "Emmanuel",
+        myMiddleName: "Chike",
+        myLastName: "Okwuanga",
+        myHeight: "183cm",
+        myCountry: "Nigeria",
+      };
+
+      myScreenOutput.innerHTML =
+        "<h2>" +
+        "First Name: " +
+        myInfo.myFirstName +
+        "<br> " +
+        "Middle Name: " +
+        myInfo.myMiddleName +
+        " <br>" +
+        " Last Name: " +
+        myInfo.myLastName +
+        "<br> " +
+        "Height: " +
+        myInfo.myHeight +
+        "<br> " +
+        "Country: " +
+        myInfo.myCountry +
+        "</h2>";
+
+      console.log(myInfo);
+    </script>
+  </body>
+</html>
